@@ -31,16 +31,21 @@ function getCountdown(awaitedDate) {
     const minutesRemainder = hoursRemainder - (minutes * 60000);
     const seconds = Math.floor(minutesRemainder / 1000);
 
-    return [days, hours, minutes, seconds];
+    return { 
+        'days': days,
+        'hours': hours,
+        'minutes': minutes,
+        'seconds': seconds
+    }
 }
 
 function writeCountdownText(countdown, selector) {
     const counter = document.querySelector(selector);
 
-    const days = countdown[0];
-    const hours = countdown[1];
-    const min = countdown[2];
-    const sec = countdown[3];
+    const days = countdown.days;
+    const hours = countdown.hours;
+    const min = countdown.minutes;
+    const sec = countdown.seconds;
 
     counter.textContent = `${days} days, ${hours} hours, ${min} minutes, & ${sec} seconds`;
 }
