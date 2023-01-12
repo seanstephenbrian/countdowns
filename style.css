@@ -21,6 +21,8 @@ time, mark, audio, video {
 
 :root {
     --rvv: calc(1rem + 1vw + 1vh);
+
+    --text-stroke: 0.2px rgba(0, 0, 0, 0.503);
 }
 
 @font-face {
@@ -47,6 +49,8 @@ body {
     min-height: 100vh;
     min-width: 100vw;
     overflow: hidden;
+    background: rgb(96,174,168);
+    background: linear-gradient(77deg, rgba(96,174,168,0.8029805672268908) 22%, rgba(118,163,198,0.7189469537815126) 100%);
 }
 
 .wrapper {
@@ -72,16 +76,17 @@ header {
 }
 
 .counter {
-    font-size: calc(0.65*var(--rvv));
+    font-size: calc(0.7*var(--rvv));
+    text-align: center;
 }
 
 .text {
     color: white;
-    font-size: calc(0.55*var(--rvv));
+    font-size: calc(0.6*var(--rvv));
     font-style: italic;
     letter-spacing: 2px;
-    text-stroke: 0.3px black;
-    -webkit-text-stroke: 0.3px black;
+    text-stroke: var(--text-stroke);
+    -webkit-text-stroke: var(--text-stroke);
 }
 
 .blue {
