@@ -1,0 +1,110 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+:root {
+    --rvv: calc(1rem + 1vw + 1vh);
+}
+
+@font-face {
+    font-family: 'Torre Farfan';
+    src: url('./font/torre.ttf');
+}
+
+@font-face {
+    font-family: 'Alegreya';
+    src: url('./font/alegreya.ttf');
+}
+
+.apostrophe {
+    font-family: 'Alegreya';
+}
+
+html,
+body {
+    box-sizing: border-box;
+    font-family: 'Torre Farfan';
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow: hidden;
+}
+
+.wrapper {
+    margin: calc(var(--rvv)) calc(var(--rvv)) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    font-size: calc(1*var(--rvv));
+    text-align: center;
+    margin-bottom: calc(1.5*var(--rvv));
+}
+
+.countdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: calc(var(--rvv));
+}
+
+.counter {
+    font-size: calc(0.65*var(--rvv));
+}
+
+.text {
+    color: white;
+    font-size: calc(0.55*var(--rvv));
+    font-style: italic;
+    letter-spacing: 2px;
+    text-stroke: 0.3px black;
+    -webkit-text-stroke: 0.3px black;
+}
+
+.blue {
+    color: rgba(0, 0, 255, 0.554);
+}
+
+.green {
+    color: rgba(0, 128, 0, 0.721);
+}
+
+.white {
+    color: white;
+}
+
+.red {
+    color: rgba(255, 0, 0, 0.845);
+}
+
+@media screen and (min-width: 600px) {
+    .text {
+        transition: letter-spacing 0.2s ease-in-out;
+    }
+    .text:hover {
+        letter-spacing: 10px;
+    }
+}
