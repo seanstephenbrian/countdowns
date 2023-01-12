@@ -59,7 +59,7 @@ body {
 header {
     font-size: calc(1*var(--rvv));
     text-align: center;
-    margin-bottom: calc(1.5*var(--rvv));
+    margin: calc(0.5*var(--rvv)) 0 calc(1.5*var(--rvv));
 }
 
 .countdown {

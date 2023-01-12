@@ -1,15 +1,21 @@
+startCounters();
+
 function renderCountdowns() {
+    const tripDate = new Date(2023, 4, 25, 5);
+    const tripCountdown = getCountdown(tripDate);
+    writeCountdownText(tripCountdown, '.trip-counter');
 
-    const tripDate = new Date(2023, 4, 25);
+    const italiaDate = new Date(2023, 6, 28, 4);
+    const italiaCountdown = getCountdown(italiaDate);
+    writeCountdownText(italiaCountdown, '.italia-counter');
 
-    const italiaDate = new Date()
-
-    const weddingDate = new Date(2023, 9, 12);
+    const weddingDate = new Date(2023, 9, 12, 16, 30);
+    const weddingCountdown = getCountdown(weddingDate);
+    writeCountdownText(weddingCountdown, '.wedding-counter');
 
 }
 
 function getCountdown(awaitedDate) {
-
     // get today's time in ms:
     const date = new Date();
     const todaysTime = date.getTime();
@@ -28,4 +34,17 @@ function getCountdown(awaitedDate) {
     return [days, hours, minutes, seconds];
 }
 
-renderCountdowns();
+function writeCountdownText(countdown, selector) {
+    const counter = document.querySelector(selector);
+
+    const days = countdown[0];
+    const hours = countdown[1];
+    const min = countdown[2];
+    const sec = countdown[3];
+
+    counter.textContent = `${days} days, ${hours} hours, ${min} minutes, & ${sec} seconds`;
+}
+
+function startCounters() {
+    window.setInterval(renderCountdowns, 1000);
+}
