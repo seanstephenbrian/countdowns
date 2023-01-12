@@ -12,7 +12,6 @@ function renderCountdowns() {
     const weddingDate = new Date(2023, 9, 12, 16, 30);
     const weddingCountdown = getCountdown(weddingDate);
     writeCountdownText(weddingCountdown, '.wedding-counter');
-
 }
 
 function getCountdown(awaitedDate) {
@@ -41,13 +40,7 @@ function getCountdown(awaitedDate) {
 
 function writeCountdownText(countdown, selector) {
     const counter = document.querySelector(selector);
-
-    const days = countdown.days;
-    const hours = countdown.hours;
-    const min = countdown.minutes;
-    const sec = countdown.seconds;
-
-    counter.textContent = `${days} days, ${hours} hours, ${min} minutes, & ${sec} seconds`;
+    counter.textContent = `${countdown.days} days, ${countdown.hours} hours, ${countdown.minutes} minutes, & ${countdown.seconds} seconds`;
 }
 
 function startCounters() {
