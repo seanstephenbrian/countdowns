@@ -85,8 +85,8 @@ header {
     font-size: calc(0.6*var(--rvv));
     font-style: italic;
     letter-spacing: 2px;
-    text-stroke: var(--text-stroke);
-    -webkit-text-stroke: var(--text-stroke);
+    /* text-stroke: var(--text-stroke);
+    -webkit-text-stroke: var(--text-stroke); */
 }
 
 .blue {
